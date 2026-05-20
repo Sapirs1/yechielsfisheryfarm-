@@ -32,10 +32,10 @@
     .filter-btn { background: #fef5f0; border: 3px solid #9fad99; color: #658f9e; padding: 0.7rem 1.8rem; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-family: 'Lora', serif; font-size: 1rem; }
     .filter-btn.active, .filter-btn:hover { background: #9fad99; color: #fef5f0; }
     .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
-    .book-card { background: #fef5f0; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(177, 146, 119, 0.15); transition: transform 0.3s ease; border: 4px solid #d4c0b0; cursor: pointer; }
+    .book-card { background: #fef5f0; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(177, 146, 119, 0.15); transition: transform 0.3s ease; border: 4px solid #d4c0b0; }
     .book-card:hover { transform: translateY(-8px); }
-    .book-cover { width: 100%; height: 300px; background: linear-gradient(135deg, #d4c0b0 0%, #e8d4c8 100%); display: flex; align-items: center; justify-content: center; color: #658f9e; padding: 1rem; font-weight: bold; position: relative; overflow: hidden; }
-    .book-cover img { width: 100%; height: 100%; object-fit: cover; }
+    .book-cover { width: 100%; aspect-ratio: 2 / 3; background: linear-gradient(135deg, #d4c0b0 0%, #e8d4c8 100%); display: flex; align-items: center; justify-content: center; color: #658f9e; padding: 1rem; font-weight: bold; position: relative; overflow: hidden; }
+    .book-cover img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
     .badge { position: absolute; top: 12px; right: 12px; background: #c68642; color: #fef5f0; padding: 0.4rem 0.9rem; border-radius: 20px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; z-index: 10; }
     .badge.upcoming { background: #7b9fb8; }
     .book-info { padding: 1.5rem; }
@@ -67,9 +67,9 @@
     .educator-card p { color: #666; font-size: 0.95rem; margin-bottom: 1.2rem; }
     .download-btn { background: linear-gradient(135deg, #9fad99 0%, #8a9f7c 100%); color: #fef5f0; padding: 0.6rem 1.5rem; border: none; border-radius: 20px; cursor: pointer; font-weight: bold; }
     .yechiel-section { background: linear-gradient(135deg, rgba(159, 173, 153, 0.06) 0%, transparent 100%); padding: 4rem 2rem; border-radius: 12px; }
-    .yechiel-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto; }
-    .yechiel-images { display: grid; grid-template-columns: 1fr; gap: 1.2rem; }
-    .yechiel-img { width: 100%; height: 240px; border: 5px solid #b1927a; border-radius: 10px; box-shadow: 0 12px 35px rgba(177, 146, 119, 0.2); object-fit: cover; object-position: center; display: block; }
+    .yechiel-content { display: block; max-width: 1000px; margin: 0 auto; }
+    .yechiel-images { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+    .yechiel-img { width: 100%; aspect-ratio: 4 / 5; border: 5px solid #b1927a; border-radius: 10px; box-shadow: 0 12px 35px rgba(177, 146, 119, 0.2); object-fit: cover; object-position: center top; display: block; }
     .yechiel-text h3 { color: #658f9e; font-size: 2rem; margin-bottom: 1.5rem; font-family: 'Crimson Text', serif; font-weight: 700; }
     .yechiel-text p { color: #555; margin-bottom: 1.2rem; font-size: 1.05rem; line-height: 1.8; }
     .quality-badge { display: inline-block; background: linear-gradient(135deg, #9fad99 0%, #8a9f7c 100%); color: #fef5f0; padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: bold; margin: 1rem 0; font-family: 'Crimson Text', serif; font-size: 1.1rem; }
@@ -86,7 +86,7 @@
       nav ul { gap: 1.5rem; }
       section h2 { font-size: 2rem; }
       .books-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
-      .yechiel-content { grid-template-columns: 1fr; gap: 2rem; }
+      .yechiel-images { gap: 0.8rem; }
     }
   </style>
 </head>
@@ -195,7 +195,6 @@
         <div class="character-card"><div class="character-icon">🐌</div><h3>Snail</h3><div class="character-superpower">Gastropod • Patience</div><p>Slow and steady, but wise observations about taking your time.</p></div>
         <div class="character-card"><div class="character-icon">🐠</div><h3>Turbo the Grey Zebrafish</h3><div class="character-superpower">Danio • Speed</div><p>Striped speedster. Fast adventures, faster-talking narrator.</p></div>
       </div>
-      <p style="text-align: center; color: #6b7d6f; font-style: italic; margin-top: 3rem;">Many more characters are still being discovered in the farm ecosystem. 🌿</p>
     </section>
 
     <section id="educators">
@@ -204,8 +203,8 @@
         <p style="text-align: center; font-size: 1.05rem; color: #555; margin-bottom: 2rem;"><strong>Yechiel's Fishery Farm</strong> combines storytelling with real science. Each book teaches biology, ecology, and animal behavior through adventure and humor.</p>
         <div class="educators-grid">
           <div class="educator-card"><h4>📖 Reading Level</h4><p>Ages 7–10 (Grades 2–4). Approx. 50–80 pages with illustrations per book.</p><p><strong>Themes:</strong> Aquatic biology, ecosystem health, character growth, problem-solving</p></div>
-          <div class="educator-card"><h4>📚 STEM Guides</h4><p>Free downloadable PDFs with each book include:</p><p style="font-size: 0.9rem;">• Real facts about featured species<br>• Discussion questions<br>• Activity ideas<br>• Glossary of scientific terms</p><button class="download-btn">Download Guide</button></div>
-          <div class="educator-card"><h4>🏫 Classroom Resources</h4><p>Group discussions, worksheets, and lesson plans for teachers.</p><p style="font-size: 0.9rem;">Perfect for science, environmental, and literacy units.</p><button class="download-btn">Classroom Kit</button></div>
+          <div class="educator-card"><h4>📚 STEM Guides</h4><p>Free downloadable PDFs with each book.</p><p style="font-size: 0.9rem;">• Real facts about species<br>• Discussion questions<br>• Activity ideas<br>• Glossary of terms</p><button class="download-btn">Download Guide</button></div>
+          <div class="educator-card"><h4>🏫 Classroom Resources</h4><p>Group discussions, worksheets, and lesson plans for teachers.</p><button class="download-btn">Classroom Kit</button></div>
         </div>
       </div>
     </section>
@@ -225,9 +224,9 @@
             <div class="quality-badge">✓ 50 Years of Real Fish Stories</div>
             <p>After nearly five decades studying aquatic life, Yechiel is bringing the hidden worlds of his Fishery Farm to young readers. Every story is rooted in real observation, real science, and real passion.</p>
             <p><strong>From Science to Story:</strong> His credentials span some of the world's finest aquaculture operations:</p>
-            <p style="margin-left: 1.5rem; color: #666; font-size: 0.95rem;">• <strong>Bar-Ilan University:</strong> Fish and Marine Invertebrate Laboratory research<br>• <strong>Water Marks:</strong> One of the world's best gourami and cichlid farms<br>• <strong>Colors Farm:</strong> One of the world's finest guppy farms—50+ years of real guppy knowledge</p>
-            <p><strong>The Real Expertise Behind the Magic:</strong> Yechiel doesn't imagine fish stories—he *lives* them. Each character reflects real species traits observed across decades. Each plot teaches real science.</p>
-            <p><strong>Why This Matters for Children:</strong> Stories rooted in truth create deeper learning. When children understand that adventure *can* be real, they develop genuine curiosity about nature, science, and discovery.</p>
+            <p style="margin-left: 1.5rem; color: #666; font-size: 0.95rem;">• <strong>Bar-Ilan University:</strong> Fish and Marine Invertebrate Laboratory research<br>• <strong>Water Marks:</strong> One of the world's best gourami and cichlid farms — expertise in breeding, care, and behavior<br>• <strong>Colors Farm:</strong> One of the world's finest guppy farms and environmental facility — 50+ years of real guppy knowledge</p>
+            <p><strong>The Real Expertise Behind the Magic:</strong> Yechiel doesn't imagine fish stories — he <em>lives</em> them. From his work with cichlids and gouramis to managing one of the world's best guppy operations, he knows fish behavior, water chemistry, ecology, and animal psychology intimately. Each character reflects real species traits observed across decades. Each plot teaches real science.</p>
+            <p><strong>Why This Matters for Children:</strong> Stories rooted in truth create deeper learning. When children understand that adventure <em>can</em> be real, they develop genuine curiosity about nature, science, and discovery.</p>
             <p style="font-style: italic; color: #658f9e; margin-top: 2rem; border-top: 3px solid #b1927a; padding-top: 1.5rem;">"After 50 years with fish, I'm sharing what they've taught me. Every character in these stories swims with purpose. Every lesson is real."</p>
           </div>
         </div>
@@ -258,11 +257,8 @@
       buttons.forEach(btn => btn.classList.remove('active'));
       event.target.classList.add('active');
       cards.forEach(card => {
-        if (status === 'all' || card.dataset.status === status) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
+        if (status === 'all' || card.dataset.status === status) card.classList.remove('hidden');
+        else card.classList.add('hidden');
       });
     }
   </script>
