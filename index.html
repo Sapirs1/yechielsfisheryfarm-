@@ -229,6 +229,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
 
     .badge {
@@ -352,11 +353,12 @@
 
     .yechiel-img {
       width: 100%;
-      height: auto;
+      height: 300px;
       border: 3px solid #2b9db8;
       border-radius: 10px;
       box-shadow: 0 8px 25px rgba(26, 95, 122, 0.15);
       object-fit: cover;
+      display: block;
     }
 
     .yechiel-text h3 {
@@ -590,16 +592,6 @@
       }
     }
   </style>
-<template id="__bundler_thumbnail" data-bg-color="#1a5f7a">
-  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-    <rect width="200" height="200" fill="#1a5f7a"/>
-    <circle cx="100" cy="100" r="50" fill="#2b9db8"/>
-    <path d="M 80 90 Q 85 85 90 90 Q 85 95 80 90" fill="#fff9e6"/>
-    <path d="M 110 90 Q 115 85 120 90 Q 115 95 110 90" fill="#fff9e6"/>
-    <path d="M 100 100 Q 95 110 100 115 Q 105 110 100 100" fill="#fff9e6"/>
-    <text x="100" y="160" font-size="24" fill="#fff9e6" text-anchor="middle" font-weight="bold">🐠 Farm</text>
-  </svg>
-</template>
 </head>
 <body>
   <nav>
@@ -610,7 +602,6 @@
       <li><a href="#characters">Characters</a></li>
       <li><a href="#activities">Activities</a></li>
       <li><a href="#author">Yechiel</a></li>
-      <li><a href="#real-yechiel">Photos</a></li>
     </ul>
   </nav>
 
@@ -628,7 +619,7 @@
         Discover the magical locations where our characters live and adventure awaits around every corner.
       </p>
       <div class="map-container">
-        <img src="./uploads/map-2.png" alt="Yechiel's Fishery Farm Map" style="max-width: 100%; height: auto;">
+        <img src="uploads/map 2.png" alt="Yechiel's Fishery Farm Map" style="max-width: 100%; height: auto;">
       </div>
       <p class="map-note">🗺️ Soon you'll be able to click on locations to meet each character!</p>
     </section>
@@ -640,7 +631,7 @@
         <button class="filter-btn active" onclick="filterBooks('all')">All (15)</button>
         <button class="filter-btn" onclick="filterBooks('published')">Published (3)</button>
         <button class="filter-btn" onclick="filterBooks('coming-soon')">Coming Soon (3)</button>
-        <button class="filter-btn" onclick="filterBooks('in-progress')">In Progress (9)</button>
+        <button class="filter-btn" onclick="filterBooks('in-progress')">In Progress (7+)</button>
       </div>
 
       <div class="books-grid" id="booksGrid">
@@ -648,11 +639,11 @@
         <div class="book-card" data-status="published" onclick="openBookModal('book1')">
           <div class="book-cover">
             <span class="badge">Published</span>
-            <img src="./uploads/front-cover.png" alt="George the Cranky Guppy">
+            <img src="uploads/front cover.png" alt="George the Cranky Guppy">
           </div>
           <div class="book-info">
             <h3>George the Cranky Guppy</h3>
-            <p>George is furious because the water "has opinions." Discover salinity, acclimation, and why discomfort is a signal.</p>
+            <p>The Water Has Opinions. Meet George's sharp wit!</p>
             <a href="#" class="buy-btn" onclick="event.stopPropagation();">Get the Book</a>
           </div>
         </div>
@@ -660,11 +651,11 @@
         <div class="book-card" data-status="published" onclick="openBookModal('book2')">
           <div class="book-cover">
             <span class="badge">Published</span>
-            <img src="./uploads/front-cover-f0cacbd6.png" alt="George and the Mosquito Patrol">
+            <img src="uploads/front cover-f0cacbd6.png" alt="George and the Mosquito Patrol">
           </div>
           <div class="book-info">
-            <h3>George and the Mosquito Patrol</h3>
-            <p>George teams with Archy the Archerfish to fight mosquito larvae. But what happens when a smaller helper does invisible work?</p>
+            <h3>George & Mosquito Patrol</h3>
+            <p>The Guppy Still Has Opinions. New adventures!</p>
             <a href="#" class="buy-btn" onclick="event.stopPropagation();">Get the Book</a>
           </div>
         </div>
@@ -672,11 +663,11 @@
         <div class="book-card" data-status="published" onclick="openBookModal('book3')">
           <div class="book-cover">
             <span class="badge">Published</span>
-            <img src="./uploads/chatgpt-cover.png" alt="George Meets the Salt Line">
+            <img src="uploads/ChatGPT cover.png" alt="George Meets the Salt Line">
           </div>
           <div class="book-info">
-            <h3>George Meets the Salt Line</h3>
-            <p>A water-mixing mistake creates a sharp salinity boundary. George learns that sudden change is very different from gradual acclimation.</p>
+            <h3>George Meets Salt Line</h3>
+            <p>Explore freshwater meets saltwater magic!</p>
             <a href="#" class="buy-btn" onclick="event.stopPropagation();">Get the Book</a>
           </div>
         </div>
@@ -688,8 +679,8 @@
             <div style="color: white; font-size: 1.2rem; font-weight: bold;">Book 4</div>
           </div>
           <div class="book-info">
-            <h3>George and the Baby Fish Nursery</h3>
-            <p>Tiny fry hide in mangrove roots. George realizes small places can be safe places.</p>
+            <h3>George's New Adventure</h3>
+            <p>The next chapter unfolds soon!</p>
             <a href="#newsletter" class="buy-btn" onclick="event.stopPropagation();">Notify Me</a>
           </div>
         </div>
@@ -700,8 +691,8 @@
             <div style="color: white; font-size: 1.2rem; font-weight: bold;">Book 5</div>
           </div>
           <div class="book-info">
-            <h3>George Finds His Water</h3>
-            <p>George can move to perfect freshwater comfort, but the brackish bog needs him. Where does he truly belong?</p>
+            <h3>Molly's Discovery</h3>
+            <p>Secrets hidden in the depths await!</p>
             <a href="#newsletter" class="buy-btn" onclick="event.stopPropagation();">Notify Me</a>
           </div>
         </div>
@@ -712,21 +703,21 @@
             <div style="color: white; font-size: 1.2rem; font-weight: bold;">Book 6</div>
           </div>
           <div class="book-info">
-            <h3>Plecy the Glutton Plecostomus</h3>
-            <p>Plecy thinks every dirty surface is a buffet. Learn why cleaner fish are helpers, not magic filters.</p>
+            <h3>Salt Wing Mystery</h3>
+            <p>Marina leads an exciting expedition!</p>
             <a href="#newsletter" class="buy-btn" onclick="event.stopPropagation();">Notify Me</a>
           </div>
         </div>
 
-        <!-- In Progress -->
+        <!-- In Progress (7+) -->
         <div class="book-card" data-status="in-progress">
           <div class="book-cover" style="background: linear-gradient(135deg, #b3e5e0 0%, #7dd4c8 100%);">
             <span class="badge" style="background: #9b59b6;">In Progress</span>
             <div style="color: white; font-size: 1.2rem; font-weight: bold;">Book 7</div>
           </div>
           <div class="book-info">
-            <h3>Plecy and the Mountain of Food</h3>
-            <p>An automatic feeder goes wrong. Even Plecy cannot eat his way out of a bad feeding mistake.</p>
+            <h3>Captain Cory's Tales</h3>
+            <p>Wisdom and adventure from our guide.</p>
             <button class="buy-btn" style="opacity: 0.7;" onclick="event.stopPropagation();">Writing...</button>
           </div>
         </div>
@@ -737,8 +728,8 @@
             <div style="color: white; font-size: 1.2rem; font-weight: bold;">Book 8</div>
           </div>
           <div class="book-info">
-            <h3>Plecy Meets Professor Nitra</h3>
-            <p>Plecy discovers invisible bacteria in the filter do more cleaning than he does. Meet the smallest workers saving the biggest tank.</p>
+            <h3>Pearl's Journey</h3>
+            <p>A new perspective from brackish waters.</p>
             <button class="buy-btn" style="opacity: 0.7;" onclick="event.stopPropagation();">Writing...</button>
           </div>
         </div>
@@ -749,8 +740,8 @@
             <div style="color: white; font-size: 1.2rem; font-weight: bold;">Book 9</div>
           </div>
           <div class="book-info">
-            <h3>Plecy and the Green Glass Feast</h3>
-            <p>Too much light and nutrients turn the tank green. A feast without balance becomes a fog.</p>
+            <h3>Greenhouse Garden</h3>
+            <p>Exploring lush aquatic environments.</p>
             <button class="buy-btn" style="opacity: 0.7;" onclick="event.stopPropagation();">Writing...</button>
           </div>
         </div>
@@ -761,8 +752,8 @@
             <div style="color: white; font-size: 1.2rem; font-weight: bold;">Book 10</div>
           </div>
           <div class="book-info">
-            <h3>Plecy Learns When to Stop</h3>
-            <p>The biggest algae patch ever! But Plecy learns that leaving enough for others is also a kind of cleaning.</p>
+            <h3>Outdoor Ponds</h3>
+            <p>Return to where it all began.</p>
             <button class="buy-btn" style="opacity: 0.7;" onclick="event.stopPropagation();">Writing...</button>
           </div>
         </div>
@@ -770,18 +761,42 @@
         <div class="book-card" data-status="in-progress">
           <div class="book-cover" style="background: linear-gradient(135deg, #b3e5e0 0%, #7dd4c8 100%);">
             <span class="badge" style="background: #9b59b6;">In Progress</span>
-            <div style="color: white; font-size: 1.2rem; font-weight: bold;">Book 11+</div>
+            <div style="color: white; font-size: 1.2rem; font-weight: bold;">Book 11</div>
           </div>
           <div class="book-info">
-            <h3>Books 11-35 Coming Soon</h3>
-            <p>Mony the Clownfish, Gloria the Betta, Groovy the Mangrove, Professor Nitra, and The Rescued Reef adventures await!</p>
+            <h3>Plecy Series</h3>
+            <p>Adventures with a new character.</p>
             <button class="buy-btn" style="opacity: 0.7;" onclick="event.stopPropagation();">Writing...</button>
+          </div>
+        </div>
+
+        <div class="book-card" data-status="in-progress">
+          <div class="book-cover" style="background: linear-gradient(135deg, #b3e5e0 0%, #7dd4c8 100%);">
+            <span class="badge" style="background: #9b59b6;">In Progress</span>
+            <div style="color: white; font-size: 1.2rem; font-weight: bold;">Book 12</div>
+          </div>
+          <div class="book-info">
+            <h3>Mony's Adventures</h3>
+            <p>New characters and discoveries.</p>
+            <button class="buy-btn" style="opacity: 0.7;" onclick="event.stopPropagation();">Writing...</button>
+          </div>
+        </div>
+
+        <div class="book-card" data-status="in-progress">
+          <div class="book-cover" style="background: linear-gradient(135deg, #b3e5e0 0%, #7dd4c8 100%);">
+            <span class="badge" style="background: #9b59b6;">In Progress</span>
+            <div style="color: white; font-size: 1.2rem; font-weight: bold;">Book 13+</div>
+          </div>
+          <div class="book-info">
+            <h3>More Stories Coming!</h3>
+            <p>35 magical tales in development.</p>
+            <button class="buy-btn" style="opacity: 0.7;" onclick="event.stopPropagation();">Stay Tuned</button>
           </div>
         </div>
       </div>
 
       <p style="text-align: center; color: #298092; font-style: italic; margin-top: 2rem; font-size: 1.05rem;">
-        🌊 <strong>35 magical stories</strong> in development. <strong>10 written, 3 coming soon</strong>, and many more on the horizon!<br>
+        🌊 <strong>35 magical stories</strong> in development. <strong>3 published, 3 coming soon</strong>, and many more on the horizon!<br>
         The adventure is just beginning. Stay tuned for more tales from Yechiel's Fishery Farm.
       </p>
     </section>
@@ -825,14 +840,14 @@
           <p>Bold and determined, always ready for the next adventure.</p>
         </div>
         <div class="character-card">
-          <div class="character-icon">🦀</div>
-          <h3>Pinchy</h3>
-          <p>Energetic and clever—the pun's in the name! Always ready to pinch in and help.</p>
+          <div class="character-icon">🐟</div>
+          <h3>Punchy</h3>
+          <p>Energetic and spirited, bringing excitement wherever he goes.</p>
         </div>
         <div class="character-card">
-          <div class="character-icon">🐠</div>
+          <div class="character-icon">🦆</div>
           <h3>Bo</h3>
-          <p>A beautiful Betta fish with a big heart and bigger dreams.</p>
+          <p>A friendly character with a big heart and bigger dreams.</p>
         </div>
         <div class="character-card">
           <div class="character-icon">🦀</div>
@@ -862,56 +877,23 @@
       <div class="yechiel-section">
         <div class="yechiel-content">
           <div class="yechiel-images">
-            <img src="./uploads/image-5.png" alt="Yechiel at the farm" class="yechiel-img">
-            <img src="./uploads/image-6.png" alt="Yechiel checking equipment" class="yechiel-img">
-            <img src="./uploads/image-7-עותק.png" alt="Yechiel with children" class="yechiel-img">
+            <img src="uploads/image 5.png" alt="Yechiel at the farm" class="yechiel-img">
+            <img src="uploads/image 6.png" alt="Yechiel checking equipment" class="yechiel-img">
+            <img src="uploads/image 7 - עותק.png" alt="Yechiel with children" class="yechiel-img">
           </div>
           <div class="yechiel-text">
             <h3>The Heart of the Farm</h3>
-            
-            <p><strong>A Real Marine Biologist</strong></p>
             <p>
-              Yechiel is a marine biologist with nearly 50 years of studying and caring for fish and aquatic creatures. His passion for water life inspires every adventure in these books.
-            </p>
-            
-            <p><strong>Years of Research & Discovery</strong></p>
-            <p>
-              At Bar-Ilan University, Yechiel worked in the Fish and Marine Invertebrate Laboratory, studying how fish live and behave in their natural homes.
-            </p>
-            
-            <p>
-              He also worked at Water Marks, learning about fish ecosystems and water quality—understanding exactly what makes a healthy home for fish and other creatures.
-            </p>
-            
-            <p>
-              His work at Colors deepened his knowledge of fish behavior and how different species interact with each other and their environment.
-            </p>
-            
-            <p><strong>Every Day on the Farm</strong></p>
-            <p>
-              Yechiel tends to his farm with care and patience.
+              Yechiel is a marine biologist with 50 years of real fish stories. His passion for aquatic life fuels every tale in this series.
             </p>
             <p>
-              He keeps the water clean and healthy.
+              Every day, he tends to his farm with care, patience, and wonder—maintaining clean water, monitoring fish health, and creating thriving ecosystems where friendships and adventures bloom.
             </p>
             <p>
-              He watches how fish behave and learn.
+              These stories are rooted in genuine observations and scientific understanding. Each tale teaches children about ecology, behavior, and the beauty of aquatic life.
             </p>
-            <p>
-              He creates safe, thriving homes for every creature.
-            </p>
-            
-            <p><strong>Real Stories from Real Science</strong></p>
-            <p>
-              Every character in this series is inspired by real observations. George the Guppy? Based on real guppy behavior. Marina the Shrimp? Real creature, real personality. Each adventure teaches something true about the amazing aquatic world.
-            </p>
-            
-            <p>
-              When children understand real science, they can see the magic in nature all around them.
-            </p>
-            
-            <p style="font-style: italic; color: #298092; margin-top: 1.5rem; border-top: 2px solid #2b9db8; padding-top: 1rem;">
-              "Every fish deserves a thriving home. When we understand and care for nature, we become part of something wonderful."
+            <p style="font-style: italic; color: #298092; margin-top: 1.5rem;">
+              "50 years of real fish stories. Every fish deserves a thriving home, and every child deserves to understand why."
             </p>
           </div>
         </div>
@@ -938,30 +920,6 @@
           <h3>Story Writing</h3>
           <p>Create your own farm adventures!</p>
           <button class="download-btn">Download</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="real-yechiel">
-      <h2>Meet the Real Yechiel</h2>
-      <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 1.05rem;">
-        These are real photos of Yechiel, the real marine biologist behind these stories. The magic in these books comes from real science and real passion.
-      </p>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
-        <div style="text-align: center;">
-          <img src="./uploads/1777484822428.jpeg" alt="Yechiel - Portrait" style="width: 100%; border-radius: 10px; box-shadow: 0 8px 25px rgba(26, 95, 122, 0.2); border: 3px solid #2b9db8;">
-          <p style="margin-top: 1rem; color: #1a5f7a; font-weight: bold;">Yechiel Kuperman</p>
-          <p style="color: #666;">Marine Biologist & Fishery Expert</p>
-        </div>
-        <div style="text-align: center;">
-          <img src="./uploads/IMG_20230915_111641.jpg" alt="Yechiel at the fish tanks" style="width: 100%; border-radius: 10px; box-shadow: 0 8px 25px rgba(26, 95, 122, 0.2); border: 3px solid #2b9db8;">
-          <p style="margin-top: 1rem; color: #1a5f7a; font-weight: bold;">At the Farm</p>
-          <p style="color: #666;">Caring for fish daily</p>
-        </div>
-        <div style="text-align: center;">
-          <img src="./uploads/IMG-20230915-111649-עותק-4af708a0.jpg" alt="Yechiel working in the fishery" style="width: 100%; border-radius: 10px; box-shadow: 0 8px 25px rgba(26, 95, 122, 0.2); border: 3px solid #2b9db8;">
-          <p style="margin-top: 1rem; color: #1a5f7a; font-weight: bold;">In the Lab</p>
-          <p style="color: #666;">50 years of real fish stories</p>
         </div>
       </div>
     </section>
@@ -994,18 +952,18 @@
     const bookData = {
       book1: {
         title: 'George the Cranky Guppy: The Water Has Opinions',
-        front: './uploads/front-cover.png',
-        back: './uploads/back-cover.png'
+        front: 'uploads/front cover.png',
+        back: 'uploads/back cover.png'
       },
       book2: {
         title: 'George and the Mosquito Patrol: The Guppy Still Has Opinions',
-        front: './uploads/front-cover-f0cacbd6.png',
-        back: './uploads/back-cover-3.png'
+        front: 'uploads/front cover-f0cacbd6.png',
+        back: 'uploads/back cover 3.png'
       },
       book3: {
         title: 'George Meets the Salt Line',
-        front: './uploads/chatgpt-cover.png',
-        back: './uploads/2cover.png'
+        front: 'uploads/ChatGPT cover.png',
+        back: 'uploads/2 cover.png'
       }
     };
 
